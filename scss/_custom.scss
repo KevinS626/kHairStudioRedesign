@@ -2,40 +2,39 @@ $container-padding: 2rem;
 
 .hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 90vh; /* if you don't want it to take up the full screen, reduce this number */
   overflow: hidden;
-  background-size: cover !important;
-  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.65) 100%), url(/assets/images/kalonsaloncutting.jpg) no-repeat center center scroll;
+  text-align: center;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .65) 100%), url("/assets/images/kalonsaloncutting.jpg") no-repeat center center scroll;
+  background-size: cover;
 }
-.hero__title {
+.hero-title {
   color: #fff;
   @include font-size(4rem);
 }
-.hero__button {
-  background: #098191;
-  transition: background ease .25s;
-  border-radius: 11px;
+.hero-button {
   display: inline-block;
-  border: none;
-  padding: 0.75rem 1.5rem;
+  padding: .75rem 1.5rem;
   margin: 0;
-  text-decoration: none;
-  color: #ffffff;
   font-size: 1.2rem;
-  cursor: pointer;
+  color: #fff;
   text-align: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  text-decoration: none;
+  cursor: pointer;
+  background: #098191;
+  border: none;
+  border-radius: 11px;
+  transition: background ease .25s;
+  appearance: none;
 }
-.hero__button:hover {
-  background: #63b6b8
+.hero-button:hover {
+  background: #63b6b8;
 }
-.hero__button:focus {
+.hero-button:focus {
   outline: 1px solid #fff;
   outline-offset: -4px;
 }
@@ -44,79 +43,36 @@ $container-padding: 2rem;
 .products {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: $container-padding;
 }
-.products__header {
+.products-header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-bottom: 2rem;
 }
-.products__subtitle {
+.products-subtitle {
   text-align: center;
 }
 
-.products__links {
+.products-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.products__body {
+.products-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 15rem;
   padding: 3rem 2rem;
 }
-.products__icon {
+.products-icon {
   @include font-size(3rem);
 }
 
-
-//Carousel
-@media (max-width: 768px) {
-  .carousel-inner .carousel-item > div {
-    display: none;
-  }
-  .carousel-inner .carousel-item > div:first-child {
-    display: block;
-  }
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-start,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-  // transition-duration: 10s;
-}
-
-/* display 4 */
-@media (min-width: 768px) {
-  .carousel-inner .carousel-item-right.active,
-  .carousel-inner .carousel-item-next,
-  .carousel-item-next:not(.carousel-item-start) {
-    transform: translateX(25%) !important;
-  }
-
-  .carousel-inner .carousel-item-left.active,
-  .carousel-item-prev:not(.carousel-item-end),
-  .active.carousel-item-start,
-  .carousel-item-prev:not(.carousel-item-end) {
-    transform: translateX(-25%) !important;
-  }
-
-  .carousel-item-next.carousel-item-start, .active.carousel-item-end {
-    transform: translateX(0) !important;
-  }
-
-  .carousel-inner .carousel-item-prev,
-  .carousel-item-prev:not(.carousel-item-end) {
-    transform: translateX(-25%) !important;
-  }
-}
