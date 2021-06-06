@@ -76,3 +76,12 @@ $container-padding: 2rem;
   @include font-size(3rem);
 }
 
+.navbar-hidden {
+  display: none;
+}
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+}

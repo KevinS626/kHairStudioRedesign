@@ -9,23 +9,20 @@
 // Import Bootstrap's bundle (all of Bootstrap's JS + Popper.js dependency)
 console.log('hello from scripts');
 
-// $('.carousel .carousel-item').each(function(){
-//   var minPerSlide = 4;
-//   var next = $(this).next();
-//   if (!next.length) {
-//   next = $(this).siblings(':first');
-//   }
-//   next.children(':first-child').clone().appendTo($(this));
-  
-//   for (var i=0;i<minPerSlide;i++) {
-//       next=next.next();
-//       if (!next.length) {
-//         next = $(this).siblings(':first');
-//       }
-      
-//       next.children(':first-child').clone().appendTo($(this));
-//     }
-// });
+// Add navbar variable
+const navbar = document.getElementById('navbar');
+// Add Class to navbar if scrolling past certain number
+window.addEventListener('scroll', function() {
+  const scrollHeight = 200;
+
+  if(this.window.pageYOffset >= scrollHeight){
+    navbar.classList.remove('navbar-hidden');
+    navbar.classList.add('navbar-fixed');
+  } else if (this.window.pageYOffset <= scrollHeight) {
+    navbar.classList.add('navbar-hidden');
+    navbar.classList.remove('navbar-fixed');
+  }
+});
 
 
 // import "../../node_modules/bootstrap/js/dist/j";
@@ -41,7 +38,5 @@ import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // import "bootstrap/js/dist/util";
 // import "bootstrap/js/dist/modal";
-
-console.log('hello from scripts2');
 
 

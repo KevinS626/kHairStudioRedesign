@@ -8,15 +8,14 @@
   </head>
   <body>
 
-    <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Kalon Hair Studio Navigation">
+    <!-- Landing Navigation -->
+    <nav class="navbar navbar-expand-lg" aria-label="Kalon Hair Studio Navigation">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#kalonnavigation" aria-controls="kalonnavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#KalonLanding" aria-controls="KalonLanding" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
   
-        <div class="collapse navbar-collapse justify-content-md-center" id="kalonnavigation">
+        <div class="collapse navbar-collapse justify-content-md-center" id="KalonLanding">
           <ul class="navbar-nav">
             <!-- Remember for accessability the aria-current -->
             <!-- <li class="nav-item">
@@ -62,6 +61,60 @@
       </div>
     </nav>
 
+    <!-- Fixed Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark navbar-hidden" aria-label="Kalon Hair Studio Navigation">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#KalonFixed" aria-controls="KalonFixed" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse justify-content-md-center" id="KalonFixed">
+          <ul class="navbar-nav">
+            <!-- Remember for accessability the aria-current -->
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Centered nav only</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/giftcard.html">Giftcard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/booknow.html">Booknow</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/bridal.html">Bridal</a>
+            </li>
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="/">Kalon</a>
+            <!-- End Logo -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/team.html">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/press.html">Press</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/videos.html">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contact.html" tabindex="-1">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
     <!-- Hero Image -->           
     <article class="hero" role="img" aria-label="Image Description">
       <span class="hero-title">
@@ -71,7 +124,6 @@
           Book Now
         </button>
     </article>
-
 
     <!-- Products and Services -->
     <article class="products">
