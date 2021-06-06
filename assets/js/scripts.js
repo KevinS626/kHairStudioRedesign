@@ -10,19 +10,17 @@
 console.log('hello from scripts');
 
 // Add navbar variable
-const navbar = document.getElementById('navbar');
+const navbar = document.getElementsByClassName('navbar-fixed')[0];
 // Add Class to navbar if scrolling past certain number
 window.addEventListener('scroll', function() {
   const scrollHeight = 200;
-
   if(this.window.pageYOffset >= scrollHeight){
-    navbar.classList.remove('navbar-hidden');
-    navbar.classList.add('navbar-fixed');
-  } else if (this.window.pageYOffset <= scrollHeight) {
-    navbar.classList.add('navbar-hidden');
-    navbar.classList.remove('navbar-fixed');
+    navbar.classList.add('navbar-fixed-open');
+  } else {
+    navbar.classList.remove('navbar-fixed-open');
   }
 });
+
 
 
 // import "../../node_modules/bootstrap/js/dist/j";
